@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #pragma warning(disable : 4996)
@@ -18,7 +18,7 @@ int main() {
     FILE* file = fopen("D:\\file.txt", "r");
 
     if (file == NULL) {
-        printf("Не вдалося відкрити файл.\n");
+        printf("РќРµ РІРґР°Р»РѕСЃСЏ РІС–РґРєСЂРёС‚Рё С„Р°Р№Р».\n");
         return 1;
     }
 
@@ -31,15 +31,15 @@ int main() {
     fgets(num, n + 1, file);
     fclose(file);
 
-    printf("Дані записані в файлі: %s", num);
+    printf("Р”Р°РЅС– Р·Р°РїРёСЃР°РЅС– РІ С„Р°Р№Р»С–: %s", num);
 
     char* str = (char*)calloc(100, sizeof(char*));
-    printf("\nЗадайте рядок який хочете дозаписати в початок файлу:\n");
+    printf("\nР—Р°РґР°Р№С‚Рµ СЂСЏРґРѕРє СЏРєРёР№ С…РѕС‡РµС‚Рµ РґРѕР·Р°РїРёСЃР°С‚Рё РІ РїРѕС‡Р°С‚РѕРє С„Р°Р№Р»Сѓ:\n");
     gets(str);
 
     add(str, num);
 
-    printf("Дані записані успішно!\n");
+    printf("Р”Р°РЅС– Р·Р°РїРёСЃР°РЅС– СѓСЃРїС–С€РЅРѕ!\n");
     free(num);
     free(str);
     return 0;

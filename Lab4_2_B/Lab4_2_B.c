@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
 #pragma warning(disable : 4996)
@@ -16,11 +16,11 @@ int setn() {
 	while (x != 1) {
 		x = 1;
 		system("cls");
-		printf("Введiть кiлькiсть рядкiв масиву: ");
+		printf("Р’РІРµРґiС‚СЊ РєiР»СЊРєiСЃС‚СЊ СЂСЏРґРєiРІ РјР°СЃРёРІСѓ: ");
 		printf("\nn = ");
 		if (scanf("%d", &n) != 1 || n <= 0) {
 			x = 0;
-			while (getchar() != '\n');  // Очистка буфера введення
+			while (getchar() != '\n');  // РћС‡РёСЃС‚РєР° Р±СѓС„РµСЂР° РІРІРµРґРµРЅРЅСЏ
 		}
 		else {
 			char c;
@@ -40,11 +40,11 @@ int setm() {
 	while (x != 1) {
 		x = 1;
 		system("cls");
-		printf("Введiть кiлькiсть стовпчикiв масиву: ");
+		printf("Р’РІРµРґiС‚СЊ РєiР»СЊРєiСЃС‚СЊ СЃС‚РѕРІРїС‡РёРєiРІ РјР°СЃРёРІСѓ: ");
 		printf("\nm = ");
 		if (scanf("%d", &m) != 1 || m <= 0) {
 			x = 0;
-			while (getchar() != '\n');  // Очистка буфера введення
+			while (getchar() != '\n');  // РћС‡РёСЃС‚РєР° Р±СѓС„РµСЂР° РІРІРµРґРµРЅРЅСЏ
 		}
 		else {
 			char c;
@@ -63,7 +63,7 @@ void arr_rand(int n, int m, int** a) {
 	const int Low = -100, High = 100;
 	srand(time(0));
 
-	printf("\nЗгенерований масив %dx%d\n", n, m);
+	printf("\nР—РіРµРЅРµСЂРѕРІР°РЅРёР№ РјР°СЃРёРІ %dx%d\n", n, m);
 	printf("A = ");
 	for (int i = 0; i < n; i++) {
 		printf("\t{");
@@ -84,12 +84,12 @@ void act(int n, int m, int** a) {
 			if (max < a[i][j]) max = a[i][j];
 		}
 	}
-	printf("\nМаксимальне число - ");
+	printf("\nРњР°РєСЃРёРјР°Р»СЊРЅРµ С‡РёСЃР»Рѕ - ");
 	printColor(max, "\x1b[31m");
-	printf("\nМінімальне число - ");
+	printf("\nРњС–РЅС–РјР°Р»СЊРЅРµ С‡РёСЃР»Рѕ - ");
 	printColor(min, "\x1b[36m");
 	res = (float)(max + min) / 2;
-	printf("\n\nСереднє арефметичне мінімального і максимального чисел - ");
+	printf("\n\nРЎРµСЂРµРґРЅС” Р°СЂРµС„РјРµС‚РёС‡РЅРµ РјС–РЅС–РјР°Р»СЊРЅРѕРіРѕ С– РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ С‡РёСЃРµР» - ");
 	printColorF(res, "\x1b[33m");
 	printf("\n");
 }
@@ -103,14 +103,14 @@ int main() {
 	int m = setm();
 	int** a = (int**)malloc(n * sizeof(int*));
 	for (int i = 0; i < n; i++) {
-		a[i] = (int*)malloc(m * sizeof(int)); // Виділення пам'яті для кожного рядка
+		a[i] = (int*)malloc(m * sizeof(int)); // Р’РёРґС–Р»РµРЅРЅСЏ РїР°Рј'СЏС‚С– РґР»СЏ РєРѕР¶РЅРѕРіРѕ СЂСЏРґРєР°
 	}
 
 	arr_rand(n, m, a);
 	act(n, m, a);
 
 	for (int i = 0; i < n; i++) {
-		free(a[i]); // Звільнення пам'яті для кожного рядка
+		free(a[i]); // Р—РІС–Р»СЊРЅРµРЅРЅСЏ РїР°Рј'СЏС‚С– РґР»СЏ РєРѕР¶РЅРѕРіРѕ СЂСЏРґРєР°
 	}
 	free(a);
 

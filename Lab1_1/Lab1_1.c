@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #pragma warning(disable : 4996)
@@ -11,7 +11,7 @@ int main(void)
 	FILE* file = fopen("D:\\111.txt", "r");
 
 	if (file == NULL) {
-		printf("Не вдалося відкрити файл.\n");
+		printf("РќРµ РІРґР°Р»РѕСЃСЏ РІС–РґРєСЂРёС‚Рё С„Р°Р№Р».\n");
 		return 1;
 	}
 	int n = 0, sum = 0, j;
@@ -19,17 +19,17 @@ int main(void)
 	while ((fgetc(file)) != EOF) {
 		n++;
 	}
-	char num['n' + 1];  // +1 для нуль-термінатора
-	fseek(file, 0, SEEK_SET);  // повернення до початку файлу
+	char num['n' + 1];  // +1 РґР»СЏ РЅСѓР»СЊ-С‚РµСЂРјС–РЅР°С‚РѕСЂР°
+	fseek(file, 0, SEEK_SET);  // РїРѕРІРµСЂРЅРµРЅРЅСЏ РґРѕ РїРѕС‡Р°С‚РєСѓ С„Р°Р№Р»Сѓ
 	fgets(num, n + 1, file);
-	printf("\nЧисла з файлу: %s ", num);
+	printf("\nР§РёСЃР»Р° Р· С„Р°Р№Р»Сѓ: %s ", num);
 	char* token = strtok(num, " ");
 
 	while (token != NULL) {
 		sum += atoi(token);
 		token = strtok(NULL, " ");
 	}
-	printf("\nСума чисел: %d \n", sum);
+	printf("\nРЎСѓРјР° С‡РёСЃРµР»: %d \n", sum);
 
 	fclose(file);
 	return 0;

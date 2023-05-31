@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #pragma warning(disable : 4996)
@@ -9,7 +9,7 @@ int setn() {
 	while (x != 1) {
 		x = 1;
 		system("cls");
-		printf("Введiть кiлькiсть чисел для задачі (мінімум 2): ");
+		printf("Р’РІРµРґiС‚СЊ РєiР»СЊРєiСЃС‚СЊ С‡РёСЃРµР» РґР»СЏ Р·Р°РґР°С‡С– (РјС–РЅС–РјСѓРј 2): ");
 		printf("\nn = ");
 		scanf("%d", &y);
 		if (y >= 2) n = y;
@@ -23,14 +23,14 @@ void set_arr(int n, float* a) {
 	while (x != 1)
 	{
 		x = 1;
-		printf("\nВвести від'ємні числа для задачі:\n");
+		printf("\nР’РІРµСЃС‚Рё РІС–Рґ'С”РјРЅС– С‡РёСЃР»Р° РґР»СЏ Р·Р°РґР°С‡С–:\n");
 		for (int i = 0; i < n; i++)
 		{
 			printf("x[%d] = ", i+1);
 			scanf("%d", &y);
 			if (y >= 0) {
 				system("cls");
-				printf("Введене не від'ємне число спробуйте знову.");
+				printf("Р’РІРµРґРµРЅРµ РЅРµ РІС–Рґ'С”РјРЅРµ С‡РёСЃР»Рѕ СЃРїСЂРѕР±СѓР№С‚Рµ Р·РЅРѕРІСѓ.");
 				x = 0;
 				break;
 			}
@@ -55,7 +55,7 @@ int main() {
 	float* a = (float*)malloc(n * sizeof(float));
 	set_arr(n, a);
 	float result = act(n - 1, a);
-	printf("\nРезультат: %.2f", result);
+	printf("\nР РµР·СѓР»СЊС‚Р°С‚: %.2f", result);
 	free(a);
 
 	return 0;

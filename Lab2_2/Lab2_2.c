@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #pragma warning(disable : 4996)
@@ -18,9 +18,9 @@ struct BrandNum
     int num;
 };
 
-// Функція порівняння для qsort
+// Р¤СѓРЅРєС†С–СЏ РїРѕСЂС–РІРЅСЏРЅРЅСЏ РґР»СЏ qsort
 int compare(const void* a, const void* b) {
-    // Приведення типів з void* до int*
+    // РџСЂРёРІРµРґРµРЅРЅСЏ С‚РёРїС–РІ Р· void* РґРѕ int*
     const int* num1 = (const int*)a;
     const int* num2 = (const int*)b;
 
@@ -96,9 +96,9 @@ int main() {
     qsort(cars, x, sizeof(int), compare);
 
     printf("|---------------------------|\n");
-    printf("| Рахунок марок автомобілів |\n");
+    printf("| Р Р°С…СѓРЅРѕРє РјР°СЂРѕРє Р°РІС‚РѕРјРѕР±С–Р»С–РІ |\n");
     printf("|---------------------------|\n");
-    printf("|  Марка \t| Кількість |\n");
+    printf("|  РњР°СЂРєР° \t| РљС–Р»СЊРєС–СЃС‚СЊ |\n");
     printf("|---------------|-----------|\n");
     for (int k = 0; k < x; k++)
     {

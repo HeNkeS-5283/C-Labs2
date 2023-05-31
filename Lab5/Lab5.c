@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
 #include <time.h>
@@ -16,7 +16,7 @@ void act() {
 	int* a = (float*)malloc(n * sizeof(float));
 
 	system("cls");
-	printf("\nЗгенерований масив:\n");
+	printf("\nР—РіРµРЅРµСЂРѕРІР°РЅРёР№ РјР°СЃРёРІ:\n");
 	printf("a = {");
 	for (int i = 0; i < n; i++) {
 		a[i] = rand() % (High - Low + 1) + Low;
@@ -24,9 +24,9 @@ void act() {
 		sum += a[i];
 	}
 	printf("}\n");
-	printf("\nКількість елементів масиву - ");
+	printf("\nРљС–Р»СЊРєС–СЃС‚СЊ РµР»РµРјРµРЅС‚С–РІ РјР°СЃРёРІСѓ - ");
 	printColor(n, "\x1b[33m");
-	printf("\nСумма чисел масиву - ");
+	printf("\nРЎСѓРјРјР° С‡РёСЃРµР» РјР°СЃРёРІСѓ - ");
 	printColor(sum, "\x1b[36m");
 	printf("\n\n");
 	free(a);
@@ -39,7 +39,7 @@ int main() {
 	system("cls");
 	char d = 'A';
 	while (d != 'N') {
-		printf("Згенерувати новий масив (Y or N):");
+		printf("Р—РіРµРЅРµСЂСѓРІР°С‚Рё РЅРѕРІРёР№ РјР°СЃРёРІ (Y or N):");
 		scanf(" %c", &d);
 		if (d == 'Y') {
 			act();
